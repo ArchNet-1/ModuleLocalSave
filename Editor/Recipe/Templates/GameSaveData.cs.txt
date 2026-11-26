@@ -1,0 +1,21 @@
+// Created by the ArchNet Hub (Services > Save). This file is yours: change it freely.
+// Everything your game saves. Only [Serializable] fields of simple types, lists, arrays and
+// other [Serializable] classes are saved (Unity's JsonUtility rules; no dictionaries).
+// When you change it in a released game, raise "Version" on the GameSave component and
+// upgrade old saves in GameSave.Migrate().
+// Docs: https://archnet-plateform.fr/#ModuleLocalSave
+
+using System;
+using System.Collections.Generic;
+
+namespace {{NAMESPACE}}
+{
+    [Serializable]
+    public class GameSaveData
+    {
+        public int level = 1;
+        public int coins;
+        public float playTimeSeconds;
+        public List<string> unlocked = new List<string>();
+    }
+}

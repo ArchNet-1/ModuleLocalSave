@@ -1,0 +1,17 @@
+{
+  "name": "com.archnet.module.localsave",
+  "version": "2.0.0",
+  "displayName": "ArchNet - Local Save Module",
+  "description": "Save slots for your game data as JSON files on the device: new game, load, save, delete, autosave when the game pauses or quits, and a version number so old saves can be upgraded.",
+  "unity": "6000.0",
+  "license": "MIT",
+  "documentationUrl": "https://archnet-plateform.fr/#ModuleLocalSave",
+  "changelogUrl": "https://github.com/ArchNet-1/ModuleLocalSave/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/ArchNet-1/ModuleLocalSave/blob/main/LICENSE.md",
+  "keywords": ["archnet", "module", "save", "load", "json", "slots"],
+  "author": {
+    "name": "ArchNet",
+    "email": "archnetmodule@gmail.com",
+    "url": "https://archnet-plateform.fr"
+  }
+}

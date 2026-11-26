@@ -1,0 +1,35 @@
+// Created by the ArchNet Hub (Services > Save). This file is yours: change it freely.
+// Use it from anywhere:
+//   var save = Services.Get<GameSave>();
+//   if (!save.Load(0)) save.NewGame(0);   // slot 0
+//   save.Current.coins += 10;
+//   save.Save();                          // also automatic when the game pauses or quits
+// See the saves: ArchNet > Hub > Services > Save > Open tool
+// Docs: https://archnet-plateform.fr/#ModuleLocalSave
+
+using ArchNet.Module;
+using UnityEngine;
+
+namespace {{NAMESPACE}}
+{
+    public class GameSave : SaveService<GameSaveData>
+    {
+        // Starting values of a new game.
+        protected override void OnNewGame(GameSaveData data)
+        {
+            data.level = 1;
+        }
+
+        // Counts play time while a game is open.
+        void Update()
+        {
+            if (CurrentSlot >= 0) Current.playTimeSeconds += Time.unscaledDeltaTime;
+        }
+
+        // Upgrade saves written by an older version of your game.
+        protected override void Migrate(int fromVersion, GameSaveData data)
+        {
+            // if (fromVersion < 2) data.unlocked.Add("starter-sword");
+        }
+    }
+}
